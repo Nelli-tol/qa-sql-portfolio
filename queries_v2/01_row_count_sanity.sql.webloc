@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>URL</key>
-	<string>https://github.com/Nelli-tol/qa-sql-portfolio/blob/main/queries_v2/queries_v2/01_row_count_sanity.sql</string>
-</dict>
-</plist>
+/* ============================================================
+   QA CHECK: Row count sanity check
+   Purpose:
+   - Basic validation that the table is not empty
+   - Useful after ETL/ELT loads
+   Expected result:
+   - total_rows > 0
+============================================================ */
+
+SELECT
+    COUNT(*) AS total_rows
+FROM users;
